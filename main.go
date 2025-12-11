@@ -29,7 +29,7 @@ func main() {
 
 	prompt := strings.Join(os.Args[1:], " ")
 	if prompt == "" {
-		prompt = "Talk about HEPA filters"
+		log.Fatalln("usage: provide a basic idea of what you want the post to be about related to your company")
 	}
 
 	response, err := aiService.MarketingBot(ctx, prompt)
